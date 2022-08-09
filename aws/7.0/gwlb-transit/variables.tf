@@ -3,16 +3,16 @@ variable access_key {}
 variable secret_key {}
 
 variable "region" {
-  default = "ap-southeast-2"
+  default = "eu-west-1"
 }
 
 // Availability zones for the region
 variable "az1" {
-  default = "ap-southeast-2a"
+  default = "eu-west-1a"
 }
 
 variable "az2" {
-  default = "ap-southeast-2b"
+  default = "eu-west-1b"
 }
 
 // VPC for FortiGate Security VPC
@@ -50,52 +50,6 @@ variable "attachcidraz2" {
 
 variable "gwlbcidraz2" {
   default = "10.1.7.0/24"
-}
-
-
-
-// VPC for Customer VPC
-variable "csvpccidr" {
-  default = "20.1.0.0/16"
-}
-
-variable "cspubliccidraz1" {
-  default = "20.1.0.0/24"
-}
-
-variable "csprivatecidraz1" {
-  default = "20.1.1.0/24"
-}
-
-
-variable "cspubliccidraz2" {
-  default = "20.1.2.0/24"
-}
-
-variable "csprivatecidraz2" {
-  default = "20.1.3.0/24"
-}
-
-// VPC for Customer2 VPC
-variable "cs2vpccidr" {
-  default = "30.1.0.0/16"
-}
-
-variable "cs2publiccidraz1" {
-  default = "30.1.0.0/24"
-}
-
-variable "cs2privatecidraz1" {
-  default = "30.1.1.0/24"
-}
-
-
-variable "cs2publiccidraz2" {
-  default = "30.1.2.0/24"
-}
-
-variable "cs2privatecidraz2" {
-  default = "30.1.3.0/24"
 }
 
 // License Type to create FortiGate-VM
@@ -166,14 +120,9 @@ variable "size" {
   default = "c5n.xlarge"
 }
 
-//  Existing SSH Key on the AWS 
-variable "keyname" {
-  default = "<AWS SSH KEY>"
-}
-
 //  Admin HTTPS access port
 variable "adminsport" {
-  default = "443"
+  default = "8443"
 }
 
 variable "bootstrap-fgtvm" {
